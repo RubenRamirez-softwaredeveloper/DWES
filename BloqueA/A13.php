@@ -13,7 +13,7 @@ $usual_price = $offer['cantidad'] * $offer['precio'];
 $offer_price = $offer['cantidad'] * $offer['descuento'];
 $saving = $usual_price - $offer_price;
 
-// Nueva variable para IVA
+// variable para IVA
 $iva = 0.21; // 21% de IVA
 $offer_price_with_iva = $offer_price + ($offer_price * $iva);
 ?>

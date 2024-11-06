@@ -17,3 +17,5 @@ $can_buy = (($wanted <= $stock) && ($deliver == true));
     <p>Stock: <?= $stock ?></p>
     <p>Wanted: <?= $wanted ?></p>
     <p>Can buy: <?= $can_buy ?></p>
+
+    
