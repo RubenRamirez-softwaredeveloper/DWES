@@ -1,5 +1,5 @@
 <?php
-$name = 'Rubén';                                  // Store the user's name
+$name = 'Rubén';                                 // Store the user's name
 $greeting = 'Hello';                             // Create initial value for greeting
 if ($name) {                                     // If $name has a value
     $greeting = 'Welcome back, ' . $name;        // Create personalized greeting
@@ -25,7 +25,7 @@ for ($i = 1; $i <= 20; $i++) {
     <tr>
       <td>
         <?= $quantity ?>
-        pack<?= ($quantity === 20) ? '' : 's'; ?>
+        pack<?= ($quantity === 1) ? '' : 's'; ?>
       </td>
       <td>
         $<?= $price ?>

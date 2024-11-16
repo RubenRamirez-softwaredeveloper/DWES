@@ -11,19 +11,20 @@ $products = [
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    ...
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <h1>The Candy Store</h1>
     <h2>Price List</h2>
     <table>
         <tr>
-            <th>Product</th>
+            <th>Item</th>
             <th>Price</th>
         </tr>
         <?php foreach ($products as $item => $price) { ?>
             <tr>
                 <td><?= $item; ?></td>
-                <td><?= $price; ?></td>
+                <td>$<?= $price; ?></td>
             </tr>
         <?php } ?>
     </table>

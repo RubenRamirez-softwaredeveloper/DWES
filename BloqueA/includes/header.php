@@ -13,3 +13,5 @@
       <a href="contact.php">Contact</a> |
       <a href="login.php">Login</a>
     </nav>
+  </body>
+</html>

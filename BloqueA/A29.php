@@ -1,6 +1,7 @@
 <?php
 $day = 'Wednesday';
 
+
 switch($day){
     case 'Monday':
         $offer = '20% off chocolates';

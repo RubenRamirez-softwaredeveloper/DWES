@@ -15,7 +15,7 @@ for ($months = 1; $months <= 12; $months++) {
 
 <?php require 'includes/club.php'; ?> 
   <p><?= $greeting ?></p>
-  <h2>Descuentos en Cuotas de Membresía</h2>
+  <h2>Descuentos en cuotas de membresía</h2>
   <table>
     <tr>
       <th>Meses</th>

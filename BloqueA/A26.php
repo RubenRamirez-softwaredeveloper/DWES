@@ -6,7 +6,7 @@ if($stock > 0){
 }
 else
 {
-    $messsage = 'More stock coming soon';
+    $message = 'More stock coming soon';
 }
 ?>
 
