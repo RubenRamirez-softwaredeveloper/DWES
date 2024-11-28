@@ -46,7 +46,7 @@ function calculate_tax(float $total_value, float $tax_rate): float
 <body>
     <h1>Gestión de Inventarios - Librería</h1>
     <h2>Detalles de Inventario</h2>
-    <table>
+    <table border="1">
         <thead>
             <tr>
                 <th>Título del libro</th>
