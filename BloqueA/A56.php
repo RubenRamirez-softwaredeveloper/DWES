@@ -44,11 +44,11 @@ $library = new Library();
 
 // Agregar libros a la biblioteca
 $library->addBook(new Book('Sancho panza y su panza', 'Cervantes', 328));
-$library->addBook(new Book('Calvicie y mi amor por España', 'Vicente del Bosque', 281));
-$library->addBook(new Book('La ciencia mojada', 'Keko Ñete', 180));
+$library->addBook(new Book('España', 'Vicente del Bosque', 281));
+$library->addBook(new Book('La ciencia y sus entresijos', 'Pablo Machado', 180));
 
 // Eliminar un libro por su título
-$library->removeBook('Vida, obra y milagros');
+$library->removeBook('España');
 
 // Obtener la lista de libros
 $books = $library->getBooks();

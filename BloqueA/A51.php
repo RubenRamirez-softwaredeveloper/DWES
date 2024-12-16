@@ -47,7 +47,7 @@ function get_tax_due(float $price, int $quantity, int $tax = 0): float
             <th>Total Value</th>
             <th>Tax Due</th>
         </tr>
-        <?php foreach ($candy as $product_name => $data){ ?>
+        <?php foreach ($candy as $product_name => $data) : ?>
             <tr>
                 <td><?= $product_name ?></td>
                 <td><?= $data['stock'] ?></td>
@@ -55,7 +55,7 @@ function get_tax_due(float $price, int $quantity, int $tax = 0): float
                 <td>$<?= get_total_value($data['price'], $data['stock']) ?></td>
                 <td>$<?= get_tax_due($data['price'], $data['stock'], $tax) ?></td>
             </tr>
-        <?php }; ?>
+        <?php endforeach; ?>
     </table>
 </body>
 </html>

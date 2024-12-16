@@ -14,8 +14,8 @@ class Account
     public string $type;
     public float  $balance;
 }
-$customer = new Customer("Rubén", "Ramírez", "ivy@eg.link", "1234", array());
-$account  = new Account('', 0);
+$customer = new Customer();
+$account  = new Account();
 $customer->email  = 'ruben@ramirez.net';
 $customer->forename = 'Ruben';
 $customer->surname = 'Ramirez';

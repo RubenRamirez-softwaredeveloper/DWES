@@ -16,6 +16,7 @@
         th, td {
             padding: 10px;
             text-align: left;
+            font-style: bold;
         }
         th {
             background-color: black;
@@ -55,9 +56,9 @@
         public $name;
         public $vehicles;
 
-        public function __construct($name) {
+        public function __construct($name, array $vehicles = []) {
             $this->name = $name;
-            $this->vehicles = [];
+            $this->vehicles = $vehicles;
         }
 
         public function addVehicle($vehicle) {
@@ -89,7 +90,7 @@
         }
     }
 
-    // Creación del parque de vehículos y algunos vehículos de ejemplo
+    // Creación de una flota de vehículos
     $fleet = new Fleet("Parque Central");
     $fleet->addVehicle(new Vehicle("Fiat", "Punto", "3157-DTC", true));
     $fleet->addVehicle(new Vehicle("Ford", "Fiesta", "9999-BBC", false));
