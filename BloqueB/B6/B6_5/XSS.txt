@@ -1,0 +1,33 @@
+¿Qué tipo de problemas podría originar un ataque XSS para los usuarios? 
+
+El Cross-Site Scripting (XSS) es un ataque grave que afecta tanto a los usuarios como a los sitios web. 
+Para los usuarios, permite el robo de cookies, tokens de sesión y datos sensibles, lo que puede llevar a compromisos de cuentas. 
+Los atacantes pueden falsificar acciones, realizar phishing dentro del sitio o redirigir a las víctimas a sitios maliciosos, 
+incluso descargar malware sin su consentimiento. A nivel del sitio, XSS daña la reputación, 
+genera pérdida de confianza y puede resultar en problemas legales por fallos en la protección de datos. 
+También facilita ataques más complejos y puede desfigurar el sitio mediante contenido no autorizado. 
+Este ataque explota la falta de validación de entradas en aplicaciones web, 
+poniendo en riesgo la seguridad y privacidad de usuarios y organizaciones, y requiere contramedidas 
+proactivas como sanitización de datos y políticas de seguridad estrictas.
+
+¿Y para el sitio web?
+
+* Daño a la Reputación:
+
+Los usuarios que experimentan problemas debido a un ataque XSS en el sitio pueden perder la confianza en la empresa, dañando la imagen del sitio.
+
+* Compromiso de Seguridad General:
+
+Un ataque XSS puede ser el punto de partida para ataques más complejos, como el escalamiento de privilegios o la propagación de malware.
+
+* Pérdida de Usuarios o Clientes:
+
+Si los usuarios sienten que el sitio no es seguro, pueden optar por no usarlo, lo que resulta en pérdida de tráfico o ingresos.
+
+* Problemas Legales:
+
+En algunos casos, las leyes de privacidad y protección de datos (como el GDPR) pueden considerar al sitio web responsable de no proteger adecuadamente los datos del usuario.
+
+* Inserción de Contenido No Deseado:
+
+Los atacantes pueden insertar publicidad no deseada, cambiar el diseño del sitio o realizar "defacements" para desacreditar la organización.
