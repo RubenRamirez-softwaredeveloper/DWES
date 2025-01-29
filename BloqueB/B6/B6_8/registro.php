@@ -1,45 +1,68 @@
-<?php include 'includes/header.php'; ?>
-
+<!-- Ejercicio 7. Comprobar que se ha enviado un formulario (Pag. 120) -->
 <?php
-// Verificamos si el formulario fue enviado
-if ($_SERVER['REQUEST_METHOD'] === 'POST') { 
-    $nombre = htmlspecialchars($_POST['nombre'] ?? '');
-    $apellido = htmlspecialchars($_POST['apellido'] ?? '');
-    $edad = htmlspecialchars($_POST['edad'] ?? '');
-    $posicion = htmlspecialchars($_POST['posicion'] ?? '');
-    $email = htmlspecialchars($_POST['email'] ?? '');
-    $telefono = htmlspecialchars($_POST['telefono'] ?? '');
 
-    echo "<h2>Registro Completo</h2>";
-    echo "<p>Nombre: $nombre</p>";
-    echo "<p>Apellido: $apellido</p>";
-    echo "<p>Edad: $edad</p>";
-    echo "<p>Posición: $posicion</p>";
-    echo "<p>Email: $email</p>";
-    echo "<p>Teléfono: $telefono</p>";
-} else { ?>
-    <!-- Formulario de registro -->
-    <form action="registro.php" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+// Validando con $_POST
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $nombre = $_POST['nombre'];
+    $apellido = $_POST['apellido'];
+    $edad = $_POST['edad'];
+    $posicion = $_POST['posicion'];
+    $email = $_POST['email'];
+    $tlf = $_POST['tlf'];
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required><br><br>
+    $datos = 'Se ha registrado en Cordobita FC!<br>';
+    $datos .= 'Nombre: ' . htmlspecialchars($nombre) . '<br>';
+    $datos .= 'Apellido: ' . htmlspecialchars($apellido) . '<br>';
+    $datos .= 'Edad: ' . htmlspecialchars($edad) . '<br>';
+    $datos .= 'Posición: ' . htmlspecialchars($posicion) . '<br>';
+    $datos .= 'E-mail: ' . htmlspecialchars($email) . '<br>';
+    $datos .= 'Teléfono: ' . htmlspecialchars($tlf) . '<br>';
+}
 
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" min="1" required><br><br>
 
-        <label for="posicion">Posición:</label>
-        <input type="text" id="posicion" name="posicion" required><br><br>
+// Validando con $_GET
+$submitted = $_GET['sent'] ?? '';
 
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required><br><br>
+if($submitted === 'save'){
+    $nombre = $_GET['nombre'] ?? '';
+    $apellido = $_GET['apellido'] ?? '';
+    $edad = $_GET['edad'] ?? '';
+    $posicion = $_GET['posicion'] ?? '';
+    $email = $_GET['email'] ?? '';
+    $tlf = $_GET['tlf'] ?? '';
 
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required><br><br>
+    $datos = 'Se ha registrado en Cordobita FC!<br>';
+    $datos .= 'Nombre: ' . htmlspecialchars($nombre) . '<br>';
+    $datos .= 'Apellido: ' . htmlspecialchars($apellido) . '<br>';
+    $datos .= 'Edad: ' . htmlspecialchars($edad) . '<br>';
+    $datos .= 'Posición: ' . htmlspecialchars($posicion) . '<br>';
+    $datos .= 'E-mail: ' . htmlspecialchars($email) . '<br>';
+    $datos .= 'Teléfono: ' . htmlspecialchars($tlf) . '<br>';
+}
+?>
 
-        <input type="submit" value="Registrar">
-    </form>
-<?php } ?>
+<!-- HTML -->
+<?php include '../includes/header.php'; ?>
 
-<?php include 'includes/footer.php'; ?>
+<h1>Formulario de Registro para CordobitaFC</h1>
+
+<form action="registro.php" method="POST">
+    <p>Nombre:      <input type="text" name="nombre"></p>
+    <p>Apellido:    <input type="text" name="apellido"></p>
+    <p>Edad:        <input type="age" name="edad"></p>
+    <p>Posición:    <input type="text" name="posicion"></p>
+    <p>Email:       <input type="email" name="email"></p>
+    <p>Teléfono:    <input type="number" name="tlf"></p>
+    
+    <p><input type="submit" name="sent" value="save"></p>
+</form>
+
+<!-- Mostrar Salida -->
+<?php
+if(isset($datos)){
+    echo $datos;
+}
+?>
+
+
+<?php include '../includes/footer.php'; ?>

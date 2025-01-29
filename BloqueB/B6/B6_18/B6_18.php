@@ -14,6 +14,7 @@ $error = [
     'evento' => '',
     'terminos' => ''
 ];
+
 $datos = [];
 
 // Procesar el formulario
@@ -177,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Mostrar resultados -->
     <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') { ?>
         <div class="result <?= $invalid ? 'error' : 'success' ?>">
-            <h3><?= htmlspecialchars($sms) ?></h3>
+            <h3><?= htmlspecialchars($sms) ?></h3> 
         </div>
     <?php } ?>
 </body>
