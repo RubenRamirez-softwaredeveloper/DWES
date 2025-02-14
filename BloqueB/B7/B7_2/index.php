@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // If form sent
 
         // Attempt to move the uploaded file to the final destination
         $moved = move_uploaded_file($temp, $path);
+        
     }
 
     if ($moved === true) { // If the file was successfully moved

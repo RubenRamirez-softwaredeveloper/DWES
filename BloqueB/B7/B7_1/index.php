@@ -12,11 +12,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                               // If 
         // Allowed file types
         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
+
+
         // Validate file type
         if (in_array($fileType, $allowedTypes)) {
             // Ensure directory exists
             if (!is_dir($uploadDir)) {
                 mkdir($uploadDir, 0755, true);
+                
+                // if directory not created
+
+                
+
             }
 
             // Move file to upload directory
@@ -35,6 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {                               // If 
         }
     } else {                                                               // Error in upload
         $message = 'The file could not be uploaded. Error: ' . $_FILES['image']['error'];
+
+        
     }
 }
 ?>
